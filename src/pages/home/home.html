@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+<ion-content scroll="false" class="map-page">
+    <it-map (onMapReady)="onMapReady();" (onMapIdle)="onMapIdle()" (onDragStart)="onDragStart()"></it-map>
+	<div id="centerMarker" *ngIf="localized"></div>
+
+</ion-content>
+ 

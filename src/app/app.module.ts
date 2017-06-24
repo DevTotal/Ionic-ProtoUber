@@ -6,11 +6,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { Login } from '../pages/login/login';
 import { MapService } from '../providers/map-service';
 import { MapComponent } from '../components/map';
 import { Geolocation, Geoposition } from '@ionic-native/Geolocation';
 import { GeocoderService } from '../providers/geocoder';
 
+import { AuthService } from '../providers/auth-service';
 import { HttpModule } from '@angular/http';
 
 @NgModule({
@@ -18,7 +20,7 @@ import { HttpModule } from '@angular/http';
     MyApp,
     HomePage,
     MapComponent,
-    
+    Login
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { HttpModule } from '@angular/http';
   entryComponents: [
     MyApp,
     HomePage,
+    Login,
   ], 
   providers: [
     StatusBar,
@@ -37,6 +40,7 @@ import { HttpModule } from '@angular/http';
     MapService,
     GeocoderService,
     Geolocation,
+    AuthService,
   ]
 })
 export class AppModule {}
